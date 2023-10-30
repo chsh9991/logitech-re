@@ -110,6 +110,10 @@ nav > ul > li > a{
     display: inline-block;
     margin-right: 20px;
 }
+/* nav 메뉴 화면 1025부터  */
+.header_wrap .button {
+    display: none;
+}
 /* container 1 */
 .container1 {
     margin-bottom: 100px;
@@ -178,6 +182,9 @@ nav > ul > li > a{
     display: none;
     margin-top: 100px;
 }
+.con2_wrap .main_text{
+    display: none;
+}
 .con2_wrap .content_wrap.active{
     display: flex;
 }
@@ -205,18 +212,20 @@ nav > ul > li > a{
     align-items: center;
     color: #fff;
     opacity: 0;
+    position: absolute;
+    top: 0;
 }
 .con2_wrap #go2 dl dt a{
     text-transform: uppercase;
 }
-    .con2_wrap .content_wrap dl dt a:hover {
+.con2_wrap .content_wrap dl dt:hover a {
     background-color: #000;
     opacity: 0.8;
 }
 .con2_wrap .content_wrap dl .box_1{
     width: 660px;
     height: 487px;
-    margin-bottom: 8px;
+    margin-bottom: 18px;
 }
 .con2_wrap .content_wrap dl .box_2{
     width: 660px;
@@ -225,24 +234,6 @@ nav > ul > li > a{
 .con2_wrap .content_wrap dl .box_3{
     width: 660px;
     height: 747px;
-}
-.con2_wrap .content_wrap dl .box_1.mx {
-    background: url('/img/c-2-1.gif')no-repeat;
-}
-.con2_wrap .content_wrap dl .box_2.mx{
-    background: url('/img/c-2-2.jpg')no-repeat;
-}
-.con2_wrap .content_wrap dl .box_3.mx{
-    background: url('/img/c-2-3.gif')no-repeat;
-}
-.con2_wrap .content_wrap dl .box_1.ergo {
-    background: url('/img/c-2-4.jpg')no-repeat;
-}
-.con2_wrap .content_wrap dl .box_2.ergo{
-    background: url('/img/c-2-5.jpg')no-repeat;
-}
-.con2_wrap .content_wrap dl .box_3.ergo{
-    background: url('/img/c-2-6.jpg')no-repeat;
 }
 /* container3 */
 .container3{
@@ -360,9 +351,246 @@ footer{
 }
 /* 화면 1024 이하 */
 @media screen and (max-width: 1024px){
-    
+.header_wrap{
+    display: flex;
+    justify-content: space-between;
+}
+header.sticky{
+    padding: 20px 0;
+}
+/* logo */
+h1 {
+    font-size: 30px;
+    margin-left: 30px;
+}
+/* nav */
+nav {
+    display: none;
+}
+/* header_right */
+.header_right {
+    margin-right: 30px;
+}
+.header_right .brand {
+    padding-right: 16px;
+}
+.header_right .brand > a{
+    font-size: 14px;
+}
+.header_right .brand ul {
+    bottom: -180px;
+}
+.header_right .brand ul li{
+    padding: 8px;
+    width: 60px;
+    height: 24px;
+}
+.header_right .h_icon {
+    margin-right: 18px;
+}
+/* nav 메뉴 */
+.header_wrap .button {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 30px;
+}
+.header_wrap .button span {
+    width: 30px;
+    height: 5px;
+    background-color: #000;
+    border-radius: 20px;
+    position: absolute;
+    transition: 0.3s;
+}
+.header_wrap .button span.active {
+    background-color: #fff;
+    z-index: 10;
+}
+.header_wrap .button span:nth-child(1) {
+    top: 0;
+}
+.header_wrap .button span:nth-child(2),.button span:nth-child(3) {
+    top: 10px;
+}
+.header_wrap .button span:nth-child(4) {
+    top: 20px;
+}
+.header_wrap .button span.active:nth-child(1),.button span.active:nth-child(4) {
+    opacity: 0;
+}
+.header_wrap .button span.active:nth-child(2) {
+    transform: rotate(45deg);
+}
+.header_wrap .button span.active:nth-child(3) {
+    transform: rotate(-45deg);
+}
+/* container 1 */
+.container1 {
+    margin-bottom: 50px;
+}
+/* text_box */
+.con_1wrap .text_box{
+    left: 20%;
+}
+.con_1wrap .text_box h2{
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+.con_1wrap .text_box p{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.con_1wrap .text_box a{
+    border: 1px solid #000;
+    padding: 10px;
+    font-size: 14px;
+}
+.con_1wrap .text_box a.zonewire{
+    margin-bottom: 10px;
+}
+/* container2 */
+.container2 {
+    margin-bottom: 50px;
+}
+.con2_wrap{
+    width: 90%;
+}
+/* tab_menu */
+.con2_wrap .tab_menu {
+    display: block;
+}
+.con2_wrap .tab_menu a{
+    padding: 10px;
+    border: 1px solid #00b8fc;
+}
+/* content_wrap */
+.con2_wrap .content_wrap{
+    flex-direction: column;
+    margin-top: 50px;
+}
+.con2_wrap .content_wrap dl.content_left {
+    margin-right: 0px;
+}
+.con2_wrap .content_wrap dl dt {
+    margin-bottom: 10px;
+}
+.con2_wrap #go1 dl dt p {
+    font-size: 14px;
+}
+.con2_wrap .content_wrap dl dt a {
+    font-size: 14px;
+}
+.con2_wrap .content_wrap dl .box_1{
+    width: 550px;
+    height: 500px;
+    margin-bottom: 18px;
+}
+.con2_wrap .content_wrap dl .box_2{
+    width: 550px;
+    height: 500px;
+}
+.con2_wrap .content_wrap dl .box_3{
+    width: 550px;
+    height: 500px;
+}
+.con2_wrap .content_wrap dl img{
+    width: 550px;
+    height: 500px;
+}
+/* container3 */
+.container3{
+    margin-bottom: 50px;
+}
+.con3_wrap{
+    width: 90%;
+}
+.con3_wrap .content_wrap ul{
+    flex-direction: column;
+    width: 700px;
+}
+.con3_wrap .content_wrap ul li{
+    margin-right: 0px;
+    margin-bottom: 10px;
+}
+.con3_wrap .content_wrap .box_wrap{
+    flex-direction: row;
+}
+/* img_box */
+.con3_wrap .content_wrap .box_wrap .img_box{
+    width: 400px;
+    height: 380px;
+    margin-right: 10px;
+}
+/* text_box */
+.con3_wrap .box_wrap .text_box{
+    width: 300px;
+    margin-top: 30px;
+}
+.con3_wrap .box_wrap .text_box h2{
+    margin-bottom: 8px;
+    font-size: 20px;
+}
+.con3_wrap .box_wrap .text_box p{
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+.con3_wrap .box_wrap .arr_wrap{
+    opacity: 0;
+    transition: 0.3s;
+    margin-top: 50px;
+    font-size: 14px;
+    display: block;
+}
+.con3_wrap .box_wrap:hover .arr_wrap {
+    opacity: 1;
+}
+/* footer */
+footer{
+    background-color: #252a2c;
+}
+.footer_wrap{
+    width: 90%;
+    padding-bottom: 10px;
+}
+/* footer_top */
+.footer_top{
+    display: flex;
+    padding: 50px 0 10px;  
+}
+.footer_top .footer_nav{
+    margin-right: 100px;
+    white-space: nowrap;
+}
+.footer_top .footer_nav h2 {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.footer_top .footer_nav_list li{
+    margin-bottom: 5px;
+}
+.footer_top .footer_nav_list li a{
+    font-size: 14px;
+}
 }
 /* 화면 768 이하 */
 @media screen and (max-width: 768px){
-    
+    .con_1wrap .text_box{
+        left: 20%;
+    }
+    .con_1wrap .text_box h2{
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+    .con_1wrap .text_box p{
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+    .con_1wrap .text_box a{
+        padding: 5px;
+        font-size: 12px;
+    }
+    .con_1wrap .text_box a.zonewire{
+        margin-bottom: 5px;
+    }
 }
